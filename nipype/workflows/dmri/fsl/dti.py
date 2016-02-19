@@ -218,7 +218,7 @@ def bedpostx_parallel(name='bedpostx_parallel',
                 (slice_dwi, mms[k], [('out_index', 'inputnode.in_index')]),
                 (inputnode, mms[k], [('mask', 'inputnode.in_reference')]),
                 (xfibres, mms[k], [(k, 'inputnode.in_files')]),
-                (mms[k], outputnode, [('outputnode.merged', 'merged_%s' % k),
+                (mms[k], outputnode, [('outputnode.merged', k),
                                       ('outputnode.mean', 'mean_%s' % k)])
 
             ])
