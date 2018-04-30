@@ -395,6 +395,8 @@ class Node(EngineBase):
             updates the hash without re-running.
         """
 
+        import time
+        time.sleep(60)
         if self.config is None:
             self.config = {}
         self.config = merge_dict(deepcopy(config._sections), self.config)
